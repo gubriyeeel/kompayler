@@ -2,7 +2,7 @@ import CodeEditor from "@/components/code-editor";
 
 function App() {
   return (
-    <div className="p-4 h-[calc(100vh-40px)] flex flex-col gap-2">
+    <div className="p-4 h-[calc(100vh-60px)] flex flex-col gap-2">
       <CodeEditor />
       <div className="flex flex-col text-center">
         <span className="text-sm text-muted-foreground">@gubriyeeel</span>
