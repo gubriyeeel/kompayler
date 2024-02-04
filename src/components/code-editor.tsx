@@ -44,10 +44,10 @@ const CodeEditor = () => {
 
       <ResizablePanelGroup
         direction="horizontal"
-        className="h-full w-full rounded-lg border"
+        className="h-full w-full rounded-md border"
       >
         <ResizablePanel defaultSize={60}>
-          <div className="flex h-full items-center justify-center p-2">
+          <div className="flex h-full items-center justify-center">
             <Editor
               height="100%"
               theme="vs-dark"
@@ -62,6 +62,7 @@ const CodeEditor = () => {
                 tabSize: 2,
                 fontSize: 14,
                 tabCompletion: "on",
+                lineNumbers: "off",
               }}
             />
           </div>
