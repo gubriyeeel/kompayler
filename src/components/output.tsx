@@ -39,7 +39,7 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
   return (
     <>
       <Button
-        className="absolute right-2 top-2"
+        className="absolute right-4 top-4"
         onClick={() => {
           compileCode();
         }}
