@@ -59,6 +59,9 @@ const CodeEditor = () => {
                 minimap: {
                   enabled: false,
                 },
+                tabSize: 2,
+                fontSize: 14,
+                tabCompletion: "on",
               }}
             />
           </div>
