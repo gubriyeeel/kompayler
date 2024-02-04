@@ -1,6 +1,5 @@
 import CodeEditor from "@/components/code-editor";
 
-
 function App() {
   return (
     <div className="p-2 h-full flex flex-col gap-2">
