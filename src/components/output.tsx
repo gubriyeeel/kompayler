@@ -23,7 +23,6 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
 
     try {
       setisLoading(true);
-      // @ts-ignore
       const { run: result } = await executeCode(sourceCode, language);
       setOutput(result.output?.split("\n"));
       result.stderr ? setIsError(true) : setIsError(false);
