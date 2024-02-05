@@ -7,6 +7,7 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
 import LanguageSelector from "@/components/language-selector";
+import { ModeToggle } from "@/components/mode-toggle";
 import Output from "@/components/output";
 
 import { CODE_SNIPPETS } from "@/constants";
@@ -35,13 +36,15 @@ const CodeEditor = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center gap-2">
         <LanguageSelector
           language={language}
           onLanguageChange={(newLanguage) => {
             onLanguageChange(newLanguage);
           }}
         />
+
+        <ModeToggle />
       </div>
 
       <ResizablePanelGroup
