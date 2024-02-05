@@ -11,7 +11,7 @@ interface OutputProps {
 }
 
 const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
-  const [output, setOutput] = useState(null);
+  const [output, setOutput] = useState<string[]>([]);
   const [isLoading, setisLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
@@ -52,12 +52,11 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
           <span className="text-sm text-red-400">{output}</span>
         </div>
       ) : (
-        <div className="text-sm p-2 font-mono">
-          {/* @ts-ignore */}
-          {output ? output.map(
-            (line: string, index: number) => (
+        <div className="text-sm p-2 font-mono text-muted-foreground">
+          {output ? (
+            output.map((line: string, index: number) => (
               <p key={index}>{line}</p>
-            )
+            ))
           ) : (
             <span className="text-sm text-muted-foreground">
               Click "Play" to see the output here.
