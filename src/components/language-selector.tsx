@@ -4,7 +4,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "./ui/select";
+} from "@/components/ui/select";
+
 import { LANGUAGE_VERSIONS } from "@/constants";
 
 interface LanguageSelectorProps {
