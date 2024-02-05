@@ -39,13 +39,13 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
   return (
     <>
       <Button
-        className="absolute right-4 top-4"
+        className="absolute right-4 top-4 flex items-center gap-2"
         onClick={() => {
           compileCode();
         }}
         disabled={isLoading}
       >
-        <Play size={20} className="mr-[-4px]" />
+        <Play size={16} className="mr-[-4px]" />
       </Button>
       {isError ? (
         <div className="text-sm p-2 border border-red-400">
@@ -57,7 +57,7 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
             output
           ) : (
             <span className="text-sm text-muted-foreground">
-              Click "Run Code" to see the output here.
+              Click "Play" to see the output here.
             </span>
           )}
         </div>
