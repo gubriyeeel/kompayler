@@ -1,13 +1,15 @@
+import { useEffect, useRef, useState } from "react";
+import { Editor } from "@monaco-editor/react";
+
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
-import { Editor } from "@monaco-editor/react";
-import { useEffect, useRef, useState } from "react";
 import LanguageSelector from "@/components/language-selector";
-import { CODE_SNIPPETS } from "@/constants";
 import Output from "@/components/output";
+
+import { CODE_SNIPPETS } from "@/constants";
 
 const CodeEditor = () => {
   const editorRef = useRef();
