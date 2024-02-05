@@ -52,7 +52,7 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
           <span className="text-sm text-red-400">{output}</span>
         </div>
       ) : (
-        <div className="text-sm p-2">
+        <div className="text-sm p-2 font-mono">
           {/* @ts-ignore */}
           {output ? output.map(
             (line: string, index: number) => (
