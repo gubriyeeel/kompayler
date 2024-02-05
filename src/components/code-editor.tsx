@@ -12,7 +12,7 @@ import Output from "@/components/output";
 const CodeEditor = () => {
   const editorRef = useRef();
   const [value, setValue] = useState<string>("");
-  const [language, setLanguage] = useState("csharp");
+  const [language, setLanguage] = useState<string>("csharp");
 
   useEffect(() => {
     // @ts-ignore
