@@ -62,7 +62,6 @@ const CodeEditor = () => {
                 tabSize: 2,
                 fontSize: 14,
                 tabCompletion: "on",
-                lineNumbers: "off",
               }}
             />
           </div>
