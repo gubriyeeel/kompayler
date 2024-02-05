@@ -25,7 +25,7 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
       setisLoading(true);
       // @ts-ignore
       const { run: result } = await executeCode(sourceCode, language);
-      setOutput(result.output);
+      setOutput(result.output?.split("\n"));
       result.stderr ? setIsError(true) : setIsError(false);
     } catch (error) {
       console.log(error);
@@ -53,8 +53,11 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
         </div>
       ) : (
         <div className="text-sm p-2">
-          {output ? (
-            output
+          {/* @ts-ignore */}
+          {output ? output.map(
+            (line: string, index: number) => (
+              <p key={index}>{line}</p>
+            )
           ) : (
             <span className="text-sm text-muted-foreground">
               Click "Play" to see the output here.
